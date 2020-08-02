@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const VideoCardTitle = styled.span`
+  visibility: hidden;
+`;
+
 export const VideoCardContainer = styled.a`
   border: 2px solid;
   border-radius: 4px;
@@ -23,9 +27,15 @@ export const VideoCardContainer = styled.a`
   &:hover,
   &:focus {
     opacity: 0.5;
+
+    ${VideoCardTitle} {
+      visibility: visible;
+    }
   }
 
   &:not(:first-child) {
     margin-left: 20px;
   }
 `;
+
+export default VideoCardContainer;
