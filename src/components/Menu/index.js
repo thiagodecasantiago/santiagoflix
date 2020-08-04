@@ -5,14 +5,14 @@ import Logo1 from '../../assets/img/Logo1.png';
 import './Menu.css';
 import Button from '../Button';
 
-function Menu({ showNewVideo }) {
+function Menu({ showNewVideoButton }) {
   return (
     <nav className='Menu'>
       <Link to='/'>
         <img className='Logo' src={Logo1} alt='Santiagoflix logo' />
       </Link>
 
-      {showNewVideo && (
+      {showNewVideoButton && (
         <Button as={Link} className='ButtonLink' to='/cadastro/video'>
           Novo vídeo
         </Button>

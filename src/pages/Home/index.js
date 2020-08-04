@@ -1,30 +1,45 @@
-import React from 'react';
-import dadosIniciais from '../../data/dados_iniciais.json';
+import React, { useState, useEffect } from 'react';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import PageDefault from '../../components/PageDefault';
+import { retrieveData } from '../../data/APICommunication.js';
 
 function Home() {
+  const [dados, setDados] = useState([]);
+
+  useEffect(() => {
+    retrieveData('/db').then((res) => {
+      if (res.length !== 0) {
+        setDados(res);
+      }
+      return;
+    });
+  }, []);
+
   return (
     <div style={{ background: '#141414' }}>
-      <PageDefault showNewVideo>
-        <BannerMain
-          videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-          url={dadosIniciais.categorias[0].videos[0].url}
-          videoDescription={
-            'A primeira CORRIDA da Marbula 1! Neste final de semana, nossos corredores terão que dominar o circuito dos Savage Speeders, Savage Speedway!'
-          }
-        />
+      <PageDefault showNewVideoButton>
+        {dados.length === 0 && <div>Carregando dados de vídeo...</div>}
+        {dados.length !== 0 && (
+          <BannerMain
+            videoTitle={dados.categories[0].videos[0].titulo}
+            url={dados.categories[0].videos[0].url}
+            videoDescription={dados.categories[0].videos[0].description}
+          />
+        )}
 
-        <Carousel ignoreFirstVideo category={dadosIniciais.categorias[0]} />
+        {dados.length === 0 && <div>Carregando dados do catálogo...</div>}
+        {dados.length !== 0 &&
+          dados.categories.map((category, index) => {
+            const ignoreFirstVideo = index === 0 ? true : false;
 
-        <Carousel category={dadosIniciais.categorias[1]} />
-
-        <Carousel category={dadosIniciais.categorias[2]} />
-
-        <Carousel category={dadosIniciais.categorias[3]} />
-
-        <Carousel category={dadosIniciais.categorias[4]} />
+            return (
+              <Carousel
+                ignoreFirstVideo={ignoreFirstVideo}
+                category={category}
+              />
+            );
+          })}
       </PageDefault>
     </div>
   );

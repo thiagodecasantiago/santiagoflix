@@ -3,10 +3,10 @@ import Menu from '../Menu';
 import Footer from '../Footer';
 import { Main } from './styles';
 
-function PageDefault({ children, showNewVideo }) {
+function PageDefault({ children, showNewVideoButton }) {
   return (
     <>
-      {showNewVideo ? <Menu showNewVideo /> : <Menu />}
+      <Menu showNewVideoButton={showNewVideoButton} />
       <Main>{children}</Main>
       <Footer />
     </>

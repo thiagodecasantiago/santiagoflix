@@ -1,16 +1,18 @@
 {
-  "categorias": [
+  "categories": [
     {
-      "titulo": "Esportes com bolas de gude",
-      "cor": "#9933aa",
+      "id": 1,
+      "title": "Esportes com bolas de gude",
+      "color": "#9933aa",
       "link_extra": {
-        "text": "Veja o acaso em ação e fique empolgado como em nenhum outro esporte.",
+        "description": "Veja o acaso em ação e fique empolgado como em nenhum outro esporte.",
         "url": "https://www.youtube.com/channel/UCYJdpnjuSWVOLgGT9fIzL0g"
       },
       "videos": [
         {
           "titulo": "Marbula One: Savage Speedway GP (S1R1)",
-          "url": "https://www.youtube.com/watch?v=55iTYdRDG4s"
+          "url": "https://www.youtube.com/watch?v=55iTYdRDG4s",
+          "description": "A primeira CORRIDA da Marbula 1! Neste final de semana, nossos corredores terão que dominar o circuito dos Savage Speeders, Savage Speedway!"
         },
         {
           "titulo": "Sand Marble Rally 2018 - Race 1",
@@ -35,9 +37,12 @@
       ]
     },
     {
-      "titulo": "Filmes",
-      "cor": "orange",
-      "text": "Análises e ensaios sobre filmes",
+      "id": 2,
+      "title": "Filmes",
+      "color": "orange",
+      "link_extra": {
+        "description": "Análises e ensaios sobre filmes"
+      },
       "videos": [
         {
           "titulo": "007: Cassino Royale - Conhecendo o Personagem Através da Ação",
@@ -62,10 +67,11 @@
       ]
     },
     {
-      "titulo": "Desenvolvimento Web",
-      "cor": "#00C86F",
+      "id": 3,
+      "title": "Desenvolvimento Web",
+      "color": "#00C86F",
       "link_extra": {
-        "text": "Cursos de desenvolvimento Web na Alura",
+        "description": "Cursos de desenvolvimento Web na Alura",
         "url": "https://www.alura.com.br/cursos-online-programacao"
       },
       "videos": [
@@ -116,8 +122,9 @@
       ]
     },
     {
-      "titulo": "Jogos de Tabuleiro - Humor",
-      "cor": "#9cd33b",
+      "id": 4,
+      "title": "Jogos de Tabuleiro - Humor",
+      "color": "#9cd33b",
       "videos": [
         {
           "titulo": "Learn To Win More Games! | Things Get Dicey!",
@@ -138,8 +145,9 @@
       ]
     },
     {
-      "titulo": "Jogos de Tabuleiro - Análises e Jogatinas",
-      "cor": "red",
+      "id": 5,
+      "title": "Jogos de Tabuleiro - Análises e Jogatinas",
+      "color": "red",
       "videos": [
         {
           "titulo": "QUER COMEÇAR A JOGAR? | De Quem é a Vez? - INDICA \"Jogos de Entrada\"",

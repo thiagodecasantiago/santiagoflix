@@ -1,50 +1,66 @@
-import React, { useState } from 'react';
-import PageDefault from '../../../components/PageDefault';
-import FormField from '../../../components/FormField';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PageDefault from '../../../components/PageDefault';
+import FormField from '../../../components/Form/FormField';
+import FormButton from '../../../components/Form/FormButton';
+import { retrieveData, sendData } from '../../../data/APICommunication.js';
 
 function CadastroCategoria() {
   const initialValues = {
-    name: '',
+    title: '',
     description: '',
-    color: '',
+    color: '#000000',
   };
-  const [categories, setCategories] = useState([initialValues]);
-
-  const [category, setCategory] = useState(initialValues);
+  const [categories, setCategories] = useState([]);
+  const [values, setValues] = useState(initialValues);
 
   function setValue(key, value) {
-    setCategory({
-      ...category,
+    setValues({
+      ...values,
       [key]: value,
     });
   }
 
-  function handleOnChange({ target }) {
+  function handleChange({ target }) {
     setValue(target.getAttribute('name'), target.value);
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    if (values.title.length !== 0 && !categories.includes(values)) {
+      sendData('/categories', values).then((res) => {
+        if (res.ok) {
+          updateCategories();
+          setValues(initialValues);
+        }
+      });
+    }
+  }
+
+  function updateCategories() {
+    retrieveData('/categories').then((res) => {
+      if (res.length !== 0) {
+        setCategories(res);
+      }
+      return;
+    });
+  }
+
+  useEffect(updateCategories, []);
+
   return (
     <PageDefault>
-      <h1>Cadastro de Categoria: {category.name}</h1>
-      <form
-        onSubmit={function handleSubmit(event) {
-          event.preventDefault();
-          if (category.name.length !== 0 && !categories.includes(category)) {
-            setCategories([...categories, category]);
-          }
-
-          setValue(initialValues);
-        }}
-      >
+      <h1>Cadastro de Categoria: {values.title}</h1>
+      <form onSubmit={handleSubmit}>
         <FormField
           label='Nome da categoria'
           type='text'
           id='catNameInput'
-          name='name'
+          name='title'
           placeholder='Escreva o nome da categoria'
-          defaultValue={category.name}
-          onChange={handleOnChange}
+          value={values.title}
+          onChange={handleChange}
         />
 
         <FormField
@@ -53,8 +69,8 @@ function CadastroCategoria() {
           id='catDescInput'
           name='description'
           placeholder='Escreva a descrição da categoria'
-          defaultValue={category.description}
-          onChange={handleOnChange}
+          value={values.description}
+          onChange={handleChange}
         />
 
         <FormField
@@ -62,20 +78,27 @@ function CadastroCategoria() {
           type='color'
           id='catColorInput'
           name='color'
-          defaultValue={category.color}
-          onChange={handleOnChange}
+          value={values.color}
+          onChange={handleChange}
         />
-        <button>Cadastrar</button>
+        <FormButton>Cadastrar</FormButton>
       </form>
-      <br />
-      Categorias Existentes:
-      <ul>
+      <h2>Categorias Existentes:</h2>
+      {categories.length === 0 && <div>Carregando categorias...</div>}
+
+      <ul style={{ listStyleType: ' none ' }}>
         {categories.map((category, index) => {
-          if (category.name.length === 0) return null;
-          return <li key={`${category.name}${index}`}>{category.name}</li>;
+          return (
+            <li
+              style={{ color: `${category.color}` }}
+              key={`${category.title}${index}`}
+            >
+              {category.title}
+            </li>
+          );
         })}
       </ul>
-      <Link to='/'>Ir para home</Link>
+      <Link to='/'>Voltar para página inicial</Link>
     </PageDefault>
   );
 }
