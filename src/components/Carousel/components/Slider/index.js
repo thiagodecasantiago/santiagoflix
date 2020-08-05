@@ -5,17 +5,23 @@ import styled from 'styled-components';
 const Container = styled.ul`
   padding: 0;
   margin: 0;
+
+  .slick-list {
+    padding-left: 5%;
+  }
   .slick-prev,
   .slick-next {
     z-index: 50;
     top: 0;
     bottom: 0;
-    margin: auto;
-    width: 30px;
-    height: 30px;
+    width: 5%;
+    height: 100%;
     transform: initial;
+    opacity: 0.5;
+    margin: auto;
+    transition: all 0.3s ease 0s;
     &:before {
-      font-size: 30px;
+      font-size: 40px;
     }
   }
 
@@ -28,33 +34,33 @@ const Container = styled.ul`
 `;
 
 export const SliderItem = styled.li`
-  margin-right: 16px;
   img {
-    margin: 16px;
     width: 298px;
-    height: 197px;
+    max-height: 260px;
     object-fit: cover;
   }
 `;
 
-const MyPrevArrow = styled.div`
+const MyArrow = styled.button`
   :hover {
-    opacity: 0.5;
+    opacity: 1;
   }
   ::before {
     color: ${(props) => props.color};
-    content: '⮜';
   }
 `;
-const MyNextArrow = styled.div`
-  :hover {
-    opacity: 0.5;
-  }
-  ::before {
-    color: ${(props) => props.color};
-    content: '⮞';
-  }
-`;
+
+// These glyphs are not supported on my phone :(
+// const MyPrevArrow = styled(MyArrow)`
+//   ::before {
+//     content: '⮜';
+//   }
+// `;
+// const MyNextArrow = styled(MyArrow)`
+//   ::before {
+//     content: '⮞';
+//   }
+// `;
 
 const Slider = ({ children, arrowColor }) => (
   <Container>
@@ -66,8 +72,8 @@ const Slider = ({ children, arrowColor }) => (
         centerMode: false,
         variableWidth: true,
         adaptiveHeight: true,
-        prevArrow: <MyPrevArrow color={arrowColor} />,
-        nextArrow: <MyNextArrow color={arrowColor} />,
+        prevArrow: <MyArrow color={arrowColor} />,
+        nextArrow: <MyArrow color={arrowColor} />,
       }}
     >
       {children}

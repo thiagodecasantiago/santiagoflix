@@ -8,18 +8,26 @@ function Home() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    categoriesRepository.getAllWithVideos().then((res) => {
-      if (res.length !== 0) {
-        setCategories(res);
-      }
-      return;
-    });
+    categoriesRepository
+      .getAllWithVideos()
+      .then((res) => {
+        if (res.length !== 0) {
+          setCategories(res);
+        }
+        return;
+      })
+      .catch(() => {
+        const loadingDiv = document.getElementById('loadingDiv');
+        loadingDiv.innerText = 'Desculpe, não foi possível carregar os dados.';
+      });
   }, []);
 
   return (
     <div style={{ background: '#141414' }}>
       <PageDefault showNewVideoButton paddingAll={0}>
-        {categories.length === 0 && <div>Carregando dados de vídeo...</div>}
+        {categories.length === 0 && (
+          <div id='loadingDiv'>Carregando dados do catálogo...</div>
+        )}
         {categories.length !== 0 && (
           <BannerMain
             videoTitle={categories[0].videos[0].titulo}
@@ -28,7 +36,6 @@ function Home() {
           />
         )}
 
-        {categories.length === 0 && <div>Carregando dados do catálogo...</div>}
         {categories.length !== 0 &&
           categories.map((category, index) => {
             const ignoreFirstVideo = index === 0 ? true : false;
