@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import PageDefault from '../../components/PageDefault';
-import { retrieveData } from '../../data/APICommunication.js';
+import categoriesRepository from '../../repositories/categories';
 
 function Home() {
-  const [dados, setDados] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    retrieveData('/db').then((res) => {
+    categoriesRepository.getAllWithVideos().then((res) => {
       if (res.length !== 0) {
-        setDados(res);
+        setCategories(res);
       }
       return;
     });
@@ -18,24 +18,25 @@ function Home() {
 
   return (
     <div style={{ background: '#141414' }}>
-      <PageDefault showNewVideoButton>
-        {dados.length === 0 && <div>Carregando dados de vídeo...</div>}
-        {dados.length !== 0 && (
+      <PageDefault showNewVideoButton paddingAll={0}>
+        {categories.length === 0 && <div>Carregando dados de vídeo...</div>}
+        {categories.length !== 0 && (
           <BannerMain
-            videoTitle={dados.categories[0].videos[0].titulo}
-            url={dados.categories[0].videos[0].url}
-            videoDescription={dados.categories[0].videos[0].description}
+            videoTitle={categories[0].videos[0].titulo}
+            url={categories[0].videos[0].url}
+            videoDescription={categories[0].videos[0].description}
           />
         )}
 
-        {dados.length === 0 && <div>Carregando dados do catálogo...</div>}
-        {dados.length !== 0 &&
-          dados.categories.map((category, index) => {
+        {categories.length === 0 && <div>Carregando dados do catálogo...</div>}
+        {categories.length !== 0 &&
+          categories.map((category, index) => {
             const ignoreFirstVideo = index === 0 ? true : false;
 
             return (
               <Carousel
                 ignoreFirstVideo={ignoreFirstVideo}
+                key={category.id}
                 category={category}
               />
             );

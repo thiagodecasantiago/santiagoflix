@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/Form/FormField';
 import FormButton from '../../../components/Form/FormButton';
-import { retrieveData, sendData } from '../../../data/APICommunication.js';
+import categoriesRepository from '../../../repositories/categories';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   const initialValues = {
@@ -11,35 +12,24 @@ function CadastroCategoria() {
     description: '',
     color: '#000000',
   };
+  const { handleChange, values, clearForm } = useForm(initialValues);
   const [categories, setCategories] = useState([]);
-  const [values, setValues] = useState(initialValues);
-
-  function setValue(key, value) {
-    setValues({
-      ...values,
-      [key]: value,
-    });
-  }
-
-  function handleChange({ target }) {
-    setValue(target.getAttribute('name'), target.value);
-  }
 
   function handleSubmit(event) {
     event.preventDefault();
 
     if (values.title.length !== 0 && !categories.includes(values)) {
-      sendData('/categories', values).then((res) => {
+      categoriesRepository.postNewCategory(values).then((res) => {
         if (res.ok) {
           updateCategories();
-          setValues(initialValues);
+          clearForm();
         }
       });
     }
   }
 
   function updateCategories() {
-    retrieveData('/categories').then((res) => {
+    categoriesRepository.getAll().then((res) => {
       if (res.length !== 0) {
         setCategories(res);
       }
@@ -50,7 +40,7 @@ function CadastroCategoria() {
   useEffect(updateCategories, []);
 
   return (
-    <PageDefault>
+    <PageDefault showNewVideoButton>
       <h1>Cadastro de Categoria: {values.title}</h1>
       <form onSubmit={handleSubmit}>
         <FormField
@@ -87,16 +77,14 @@ function CadastroCategoria() {
       {categories.length === 0 && <div>Carregando categorias...</div>}
 
       <ul style={{ listStyleType: ' none ' }}>
-        {categories.map((category, index) => {
-          return (
-            <li
-              style={{ color: `${category.color}` }}
-              key={`${category.title}${index}`}
-            >
-              {category.title}
-            </li>
-          );
-        })}
+        {categories.map((category, index) => (
+          <li
+            style={{ color: `${category.color}` }}
+            key={`${category.title}${index}`}
+          >
+            {category.title}
+          </li>
+        ))}
       </ul>
       <Link to='/'>Voltar para página inicial</Link>
     </PageDefault>

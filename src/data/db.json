@@ -7,34 +7,7 @@
       "link_extra": {
         "description": "Veja o acaso em ação e fique empolgado como em nenhum outro esporte.",
         "url": "https://www.youtube.com/channel/UCYJdpnjuSWVOLgGT9fIzL0g"
-      },
-      "videos": [
-        {
-          "titulo": "Marbula One: Savage Speedway GP (S1R1)",
-          "url": "https://www.youtube.com/watch?v=55iTYdRDG4s",
-          "description": "A primeira CORRIDA da Marbula 1! Neste final de semana, nossos corredores terão que dominar o circuito dos Savage Speeders, Savage Speedway!"
-        },
-        {
-          "titulo": "Sand Marble Rally 2018 - Race 1",
-          "url": "https://www.youtube.com/watch?v=_cBHmu_cNww"
-        },
-        {
-          "titulo": "Marble League 2020 Opening Ceremony + E1 - Balancing",
-          "url": "https://www.youtube.com/watch?v=NPFVLLxhEI4"
-        },
-        {
-          "titulo": "Winter MarbleLympics 2018 Friendly Practice Round",
-          "url": "https://www.youtube.com/watch?v=VzZNYXd8TkE"
-        },
-        {
-          "titulo": "Rally de Bolinhas de Gude na Areia 2019 Corrida 1",
-          "url": "https://www.youtube.com/watch?v=50L9kNODluI"
-        },
-        {
-          "titulo": "Marble Race: MarbleLympics 2019 Friendly Round",
-          "url": "https://www.youtube.com/watch?v=ssIYDJRGDeU"
-        }
-      ]
+      }
     },
     {
       "id": 2,
@@ -42,29 +15,7 @@
       "color": "orange",
       "link_extra": {
         "description": "Análises e ensaios sobre filmes"
-      },
-      "videos": [
-        {
-          "titulo": "007: Cassino Royale - Conhecendo o Personagem Através da Ação",
-          "url": "https://www.youtube.com/watch?v=_GdBnwXLJdI"
-        },
-        {
-          "titulo": "A Brief Look at Texting and the Internet in Film",
-          "url": "https://www.youtube.com/watch?v=uFfq2zblGXw"
-        },
-        {
-          "titulo": "Estrelas Além do Tempo - O Poder das Subtramas",
-          "url": "https://www.youtube.com/watch?v=DLXwzj59mnM"
-        },
-        {
-          "titulo": "Harry Potter: What Magic Sounds Like",
-          "url": "https://www.youtube.com/watch?v=bJvOqXdsEp8"
-        },
-        {
-          "titulo": "Vancouver Never Plays Itself",
-          "url": "https://www.youtube.com/watch?v=ojm74VGsZBU"
-        }
-      ]
+      }
     },
     {
       "id": 3,
@@ -73,103 +24,214 @@
       "link_extra": {
         "description": "Cursos de desenvolvimento Web na Alura",
         "url": "https://www.alura.com.br/cursos-online-programacao"
-      },
-      "videos": [
-        {
-          "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
-          "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
-        },
-        {
-          "titulo": "Componentização com VanillaJS #AluraMais",
-          "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
-        },
-        {
-          "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-          "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY"
-        },
-        {
-          "titulo": "API: Dicionário do Programador",
-          "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
-        },
-        {
-          "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
-          "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
-        },
-        {
-          "titulo": "Usando Git Direito",
-          "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
-        },
-        {
-          "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
-        },
-        {
-          "titulo": "SEO com React",
-          "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
-        },
-        {
-          "titulo": "Pare de chutar e aprenda a display: inline #01",
-          "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
-        },
-        {
-          "titulo": "Novidades do Angular v9",
-          "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
-        },
-        {
-          "titulo": "Base para aprender os frameworks",
-          "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
-        }
-      ]
+      }
     },
     {
       "id": 4,
       "title": "Jogos de Tabuleiro - Humor",
-      "color": "#9cd33b",
-      "videos": [
-        {
-          "titulo": "Learn To Win More Games! | Things Get Dicey!",
-          "url": "https://www.youtube.com/watch?v=AgA96r3Rscw"
-        },
-        {
-          "titulo": "HeroQuest (Inside the Box - Ep. 35)",
-          "url": "https://www.youtube.com/watch?v=YIx1_eDDWAc"
-        },
-        {
-          "titulo": "How To Play - Jenga",
-          "url": "https://www.youtube.com/watch?v=-MIKmDMdM9M"
-        },
-        {
-          "titulo": "The Teach | Things Get Dicey!",
-          "url": "https://www.youtube.com/watch?v=BJ06hsjOT5c"
-        }
-      ]
+      "color": "#9cd33b"
     },
     {
       "id": 5,
       "title": "Jogos de Tabuleiro - Análises e Jogatinas",
-      "color": "red",
-      "videos": [
-        {
-          "titulo": "QUER COMEÇAR A JOGAR? | De Quem é a Vez? - INDICA \"Jogos de Entrada\"",
-          "url": "https://www.youtube.com/watch?v=sl2IlzpD7gQ"
-        },
-        {
-          "titulo": "Análise e Gameplay Bandido - Covil dos Jogos",
-          "url": "https://www.youtube.com/watch?v=gZFGgvrAlnc"
-        },
-        {
-          "titulo": "Direto ao Ponto - EP 507 - God of War",
-          "url": "https://www.youtube.com/watch?v=zcjNoaiCVqI"
-        },
-        {
-          "titulo": "Team 3 (Conclave) - Partida completa + regras",
-          "url": "https://www.youtube.com/watch?v=WvioO0IRYSM"
-        },
-        {
-          "titulo": "King of Tokyo + Expansões - Review por Jogando Offline (s02e03)",
-          "url": "https://www.youtube.com/watch?v=YqnVdqfc3e4"
-        }
-      ]
+      "color": "red"
+    },
+    {
+      "title": "Nova Categoria",
+      "color": "#bc3434",
+      "link_extra": {
+        "description": ""
+      },
+      "id": 6
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "title": "Marbula One: Savage Speedway GP (S1R1)",
+      "url": "https://www.youtube.com/watch?v=55iTYdRDG4s",
+      "description": "A primeira CORRIDA da Marbula 1! Neste final de semana, nossos corredores terão que dominar o circuito dos Savage Speeders, Savage Speedway!"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "title": "Sand Marble Rally 2018 - Race 1",
+      "url": "https://www.youtube.com/watch?v=_cBHmu_cNww"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "title": "Marble League 2020 Opening Ceremony + E1 - Balancing",
+      "url": "https://www.youtube.com/watch?v=NPFVLLxhEI4"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "title": "Winter MarbleLympics 2018 Friendly Practice Round",
+      "url": "https://www.youtube.com/watch?v=VzZNYXd8TkE"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "title": "Rally de Bolinhas de Gude na Areia 2019 Corrida 1",
+      "url": "https://www.youtube.com/watch?v=50L9kNODluI"
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "title": "Marble Race: MarbleLympics 2019 Friendly Round",
+      "url": "https://www.youtube.com/watch?v=ssIYDJRGDeU"
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "title": "007: Cassino Royale - Conhecendo o Personagem Através da Ação",
+      "url": "https://www.youtube.com/watch?v=_GdBnwXLJdI"
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "title": "A Brief Look at Texting and the Internet in Film",
+      "url": "https://www.youtube.com/watch?v=uFfq2zblGXw"
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "title": "Estrelas Além do Tempo - O Poder das Subtramas",
+      "url": "https://www.youtube.com/watch?v=DLXwzj59mnM"
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "title": "Harry Potter: What Magic Sounds Like",
+      "url": "https://www.youtube.com/watch?v=bJvOqXdsEp8"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "title": "Vancouver Never Plays Itself",
+      "url": "https://www.youtube.com/watch?v=ojm74VGsZBU"
+    },
+    {
+      "id": 12,
+      "categoryId": 3,
+      "title": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
+      "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
+    },
+    {
+      "id": 13,
+      "categoryId": 3,
+      "title": "Componentização com VanillaJS #AluraMais",
+      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+    },
+    {
+      "id": 14,
+      "categoryId": 3,
+      "title": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
+      "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY"
+    },
+    {
+      "id": 15,
+      "categoryId": 3,
+      "title": "API: Dicionário do Programador",
+      "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
+    },
+    {
+      "id": 16,
+      "categoryId": 3,
+      "title": "Template String: Interpolando strings com JavaScript #AluraMais",
+      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
+    },
+    {
+      "id": 17,
+      "categoryId": 3,
+      "title": "Usando Git Direito",
+      "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
+    },
+    {
+      "id": 18,
+      "categoryId": 3,
+      "title": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+    },
+    {
+      "id": 19,
+      "categoryId": 3,
+      "title": "SEO com React",
+      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+    },
+    {
+      "id": 20,
+      "categoryId": 3,
+      "title": "Pare de chutar e aprenda a display: inline #01",
+      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+    },
+    {
+      "id": 21,
+      "categoryId": 3,
+      "title": "Novidades do Angular v9",
+      "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
+    },
+    {
+      "id": 22,
+      "categoryId": 3,
+      "title": "Base para aprender os frameworks",
+      "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+    },
+    {
+      "id": 23,
+      "categoryId": 4,
+      "title": "Learn To Win More Games! | Things Get Dicey!",
+      "url": "https://www.youtube.com/watch?v=AgA96r3Rscw"
+    },
+    {
+      "id": 24,
+      "categoryId": 4,
+      "title": "HeroQuest (Inside the Box - Ep. 35)",
+      "url": "https://www.youtube.com/watch?v=YIx1_eDDWAc"
+    },
+    {
+      "id": 25,
+      "categoryId": 4,
+      "title": "How To Play - Jenga",
+      "url": "https://www.youtube.com/watch?v=-MIKmDMdM9M"
+    },
+    {
+      "id": 26,
+      "categoryId": 4,
+      "title": "The Teach | Things Get Dicey!",
+      "url": "https://www.youtube.com/watch?v=BJ06hsjOT5c"
+    },
+    {
+      "id": 27,
+      "categoryId": 5,
+      "title": "QUER COMEÇAR A JOGAR? | De Quem é a Vez? - INDICA \"Jogos de Entrada\"",
+      "url": "https://www.youtube.com/watch?v=sl2IlzpD7gQ"
+    },
+    {
+      "id": 28,
+      "categoryId": 5,
+      "title": "Análise e Gameplay Bandido - Covil dos Jogos",
+      "url": "https://www.youtube.com/watch?v=gZFGgvrAlnc"
+    },
+    {
+      "id": 29,
+      "categoryId": 5,
+      "title": "Direto ao Ponto - EP 507 - God of War",
+      "url": "https://www.youtube.com/watch?v=zcjNoaiCVqI"
+    },
+    {
+      "id": 30,
+      "categoryId": 5,
+      "title": "Team 3 (Conclave) - Partida completa + regras",
+      "url": "https://www.youtube.com/watch?v=WvioO0IRYSM"
+    },
+    {
+      "id": 31,
+      "categoryId": 5,
+      "title": "King of Tokyo + Expansões - Review por Jogando Offline (s02e03)",
+      "url": "https://www.youtube.com/watch?v=YqnVdqfc3e4"
     }
   ]
 }
